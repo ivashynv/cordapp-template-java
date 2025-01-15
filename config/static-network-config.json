@@ -1,18 +1,14 @@
 [
   {
-    "x500Name" : "CN=Alice, OU=Test Dept, O=R3, L=London, C=GB",
+    "x500Name" : "CN=AliceTrader, OU=Test Dept, O=R3, L=London, C=GB",
     "cpi" : "MyCorDapp"
   },
   {
-    "x500Name" : "CN=Bob, OU=Test Dept, O=R3, L=London, C=GB",
+    "x500Name" : "CN=BobTrader, OU=Test Dept, O=R3, L=London, C=GB",
     "cpi" : "MyCorDapp"
   },
   {
-    "x500Name" : "CN=Charlie, OU=Test Dept, O=R3, L=London, C=GB",
-    "cpi" : "MyCorDapp"
-  },
-  {
-    "x500Name" : "CN=Dave, OU=Test Dept, O=R3, L=London, C=GB",
+    "x500Name" : "CN=Minter, OU=Test Dept, O=R3, L=London, C=GB",
     "cpi" : "MyCorDapp"
   },
   {
