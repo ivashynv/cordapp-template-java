@@ -2,6 +2,7 @@ package com.r3.developers.metals.states;
 
 import com.r3.developers.metals.contracts.MetalsTransferContract;
 import lombok.AccessLevel;
+import lombok.Builder;
 import lombok.Data;
 import lombok.experimental.FieldDefaults;
 import net.corda.v5.base.annotations.ConstructorForDeserialization;
@@ -14,6 +15,7 @@ import java.util.UUID;
 
 @BelongsToContract(MetalsTransferContract.class)
 @Data
+@Builder
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class TransferState implements ContractState {
     UUID id;

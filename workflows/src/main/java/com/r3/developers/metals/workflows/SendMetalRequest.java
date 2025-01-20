@@ -5,7 +5,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.FieldDefaults;
-import net.corda.v5.base.types.MemberX500Name;
 
 import java.security.PublicKey;
 
@@ -13,9 +12,9 @@ import java.security.PublicKey;
 @NoArgsConstructor
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class MintMetalRequest {
+public class SendMetalRequest {
   
   String metalTicker;
   int weight;
-  PublicKey owner;
+  PublicKey recipient;
 }

@@ -11,9 +11,9 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.logging.Level;
 
-@InitiatedBy(protocol = "mint-metal-protocol")
+@InitiatedBy(protocol = "transfer-metal-protocol")
 @Log
-public class MintMetalResponderFlow implements ResponderFlow {
+public class TransferMetalResponderFlow implements ResponderFlow {
 
   @CordaInject
   UtxoLedgerService utxoLedgerService;
@@ -23,9 +23,9 @@ public class MintMetalResponderFlow implements ResponderFlow {
     try {
 //      MemberX500Name owner = session.getCounterparty();
       UtxoSignedTransaction finalizedSignedTransaction = utxoLedgerService.receiveFinality(session, _transaction -> {}).getTransaction();
-      log.log(Level.INFO, String.format("Finished mint responder flow. Tx: %s", finalizedSignedTransaction.getId()));
+      log.log(Level.INFO, String.format("Finished transfer flow. Tx: %s", finalizedSignedTransaction.getId()));
     } catch (Exception e) {
-      log.log(Level.WARNING, "Exception occurred in mint responder flow", e);
+      log.log(Level.WARNING, "Exception occurred in transfer metal flow", e);
     }
   }
 }
